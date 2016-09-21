@@ -5,7 +5,7 @@ findDivisor x divisor
       | (isDividable x divisor) == True = divisor
       | otherwise                       = findDivisor x (divisor + 1)
 
-isPrime x = findDivisor x 2
+isPrime x = findDivisor x 2 == x
 
 let primes = filter isPrime [1,2..]
 
